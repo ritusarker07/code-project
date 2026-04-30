@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blood Donation System - Pabna</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+<div class="container">
+
+<header>
+    <h1>RedPulse</h1>
+</header>
+
+<!-- Navigation Buttons -->
+<div class="nav-buttons">
+    <button onclick="showPanel('home')">Home</button>
+    <button onclick="showPanel('admin')">Admin Panel</button>
+    <button onclick="showPanel('donor')">Donor Panel</button>
+    <button onclick="showPanel('donation')">Donation Panel</button>
+</div>
+
+<!-- Front Page -->
+<section id="home" class="panel active">
+    <h2>Welcome to RedPulse</h2>
+    <p><strong>A blood donation platform for saving life.</strong></p>
+</section>
+
+<!-- Admin Panel -->
+<section id="admin" class="panel">
+    <h2>Admins</h2>
+    <p>Contact for any query</p>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+        </tr>
+        <tr>
+            <td>Ritu Sarker</td>
+            <td>01712-345678</td>
+        </tr>
+        <tr>
+            <td>Fatema Khatun</td>
+            <td>01819-876543</td>
+        </tr>
+        <tr>
+            <td>Rafiul Islam</td>
+            <td>01625-112233</td>
+        </tr>
+    </table>
+</section>
+
+<!-- Donation Panel -->
+<section id="donation" class="panel">
+    <h2>Donate Here</h2>
+    <form>
+        <input type="text" placeholder="Donor Name" required>
+        <input type="text" placeholder="Blood Group " required>
+        <input type="number" placeholder="Available Days" min="1" required>
+        
+      <input type="text" placeholder="Location (e.g. Pabna)" required>  
+      <input type="number" placeholder="Phone number"  required>
+        
+        <button type="submit" class="action-btn">Submit</button>
+    </form>
+</section>
+
+<!-- Donor Panel -->
+<section id="donor" class="panel">
+    <h2>Find Your Donor</h2>
+
+    <div class="search-box">
+        <input type="text" id="searchGroup" placeholder="Enter Blood Group (e.g. A+)">
+        <button onclick="searchDonor()">Search</button>
+    </div>
+
+    <table id="donorTable">
+        <tr>
+            <th>Name</th>
+            <th>Blood Group</th>
+            <th>Available (Days)</th>
+            <th>Location</th>
+            <th>Phone number</th>
+        </tr>
+        <tr>
+            <td>Rahim Uddin</td>
+            <td>A+</td>
+            <td>10</td>
+            <td>Pabna</td>
+            <td>017********</td>
+        </tr>
+        <tr>
+            <td>Karima Begum</td>
+            <td>B+</td>
+            <td>7</td>
+            <td>Pabna</td>
+            <td>017********</td>
+        </tr>
+        <tr>
+            <td>Sabbir Hossain</td>
+            <td>O-</td>
+            <td>5</td>
+            <td>Pabna</td>
+            <td>017********</td>
+        </tr>
+        <tr>
+            <td>Nusrat Jahan</td>
+            <td>A-</td>
+            <td>12</td>
+            <td>Pabna</td>
+            <td>017********</td>
+        </tr>
+    </table>
+</section>
+
+<footer>
+    <p>© Today you, tomorrow them</p>
+</footer>
+
+</div>
+<script src="bld.js"></script>
+
+
+
+</body>
+</html>
